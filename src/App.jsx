@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 function Home() {
@@ -15,8 +17,7 @@ function Results() {
 function App() {
   return (
       <BrowserRouter>
-        <h1>Election Voting System</h1>
-
+          <Header />
         <nav>
           <NavLink to="/">Home</NavLink> |
           <NavLink to="/elections">Elections</NavLink> |
@@ -28,6 +29,7 @@ function App() {
           <Route path="/elections" element={<Elections />} />
           <Route path="/results" element={<Results />} />
         </Routes>
+          <Footer />
       </BrowserRouter>
   );
 }
